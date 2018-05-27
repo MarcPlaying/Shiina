@@ -1,0 +1,15 @@
+{% extends "home/base.html" %}
+
+{% block home %}
+{% load staticfiles %}
+<img src="{% static 'img/headers/new.png' %}" class="img-fluid" alt="Responsive image">
+<div class="container">
+  <div class="logo-home">
+    <img src="{% static 'img/newnope.jpg' %}" class="img-fluid" alt="">
+  </div>
+  <div class="welcome-home-h1">
+    <h1>Nope!</h1>
+    <p>Sorry but the new Site isn't ready and some things don't work :c</p>
+  </div>
+</div>
+{% endblock %}

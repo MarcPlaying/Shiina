@@ -1,0 +1,71 @@
+{% extends "home/base.html" %}
+
+{% block home %}
+{% load staticfiles %}
+<img src="{% static 'img/headers/girlwithbubbles.png' %}" class="img-fluid" alt="Responsive image">
+<div class="container">
+  <div class="card-group">
+  {% with '1563181 651155 1295210' as list %}
+    {% for s in list.split %}
+    <div class="card bg-dark">
+     <div class="card-body">
+       <h5 class="card-title display-4">{{ s }} - Special Ranked on Enjuu</h5>
+         <a href="https://osu.ppy.sh/b/{{ s }}">
+           <button type="button" class="btn btn-info btn-circle btn btn-secondary" data-toggle="tooltip" data-placement="top" title="osu.ppy.sh"><i class="fas fa-arrow-circle-down"></i></button>
+         </a>
+         <a href="http://bloodcat.com/osu/s/{{ s }}">
+           <button type="button" class="btn btn-info btn-circle btn btn-secondary" data-toggle="tooltip" data-placement="top" title="bloodcat"><i class="fas fa-arrow-circle-down"></i></button>
+         </a>
+         <a href="https://storage.enjuu.click/{{ s }}.osz">
+           <button type="button" class="btn btn-info btn-circle btn btn-secondary" data-toggle="tooltip" data-placement="top" title="own mirror"><i class="fas fa-arrow-circle-down"></i></button>
+         </a>
+     </div>
+  <a href="https://enjuu.click/b/{{ s }}">
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="Forwards to classic Site">
+            Visit on Leaderboard
+    </button>
+  </a>
+   </div>
+
+    {% empty %}
+  </div>
+    {% endfor %}
+  </div>
+    {% endwith %}
+
+    <hr style="width: 100%; color: white; height: 1px; background-color:black;" />
+
+    <!--
+      No.2
+  -->
+
+  <div class="card-group">
+  {% with '1582287 765214 878369' as list %}
+    {% for s in list.split %}
+    <div class="card bg-dark">
+     <div class="card-body">
+       <h5 class="card-title display-4">{{ s }} - Special Ranked on Enjuu</h5>
+         <a href="https://osu.ppy.sh/b/{{ s }}">
+           <button type="button" class="btn btn-info btn-circle btn btn-secondary" data-toggle="tooltip" data-placement="top" title="osu.ppy.sh"><i class="fas fa-arrow-circle-down"></i></button>
+         </a>
+         <a href="http://bloodcat.com/osu/s/{{ s }}">
+           <button type="button" class="btn btn-info btn-circle btn btn-secondary" data-toggle="tooltip" data-placement="top" title="bloodcat"><i class="fas fa-arrow-circle-down"></i></button>
+         </a>
+         <a href="https://storage.enjuu.click/{{ s }}.osz">
+           <button type="button" class="btn btn-info btn-circle btn btn-secondary" data-toggle="tooltip" data-placement="top" title="own mirror"><i class="fas fa-arrow-circle-down"></i></button>
+         </a>
+     </div>
+  <a href="https://enjuu.click/b/{{ s }}">
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="Forwards to classic Site">
+            Visit on Leaderboard
+    </button>
+  </a>
+   </div>
+
+    {% empty %}
+  </div>
+    {% endfor %}
+  </div>
+    {% endwith %}
+</div>
+{% endblock %}

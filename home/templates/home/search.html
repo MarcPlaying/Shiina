@@ -1,0 +1,12 @@
+{% extends "home/base.html" %}
+
+{% block home %}
+{% load staticfiles %}
+<img src="{% static 'img/headers/girlinroom.png' %}" class="img-fluid" alt="Responsive image">
+<div class="container">
+  <div class="welcome-home-h1">
+    <h1>Results for {{ query }}:</h1>
+      <p>Work in progress...</p>
+  </div>
+</div>
+{% endblock %}

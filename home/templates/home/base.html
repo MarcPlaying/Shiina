@@ -1,0 +1,67 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Enjuu</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <script src="{% static 'css/semantic.css' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/own/style.css' %}" type="text/css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" rel="home" href="/home/" title="Home">
+        <img style="max-width:100px; margin-top: -7px;"
+             src="{% static 'img/logo.png' %}">
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <a class="nav-link" href="/home/">Home <span class="sr-only"></span></a>
+      <li class="nav-item dropdown bg-dark">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Info
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://mobile.enjuu.click//">Android App</a>
+          <a class="dropdown-item" href="https://www.youtube.com/channel/UCOZ5teZ20-z0RUQ3ksGWbNA">YouTube</a>
+          <a class="dropdown-item" href="https://www.instagram.com/enjuu.click/">Instagram</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Discord(Chat, Support)</a>
+        </div>
+      </li>
+      <a class="nav-link" href="/beatmaps/">Beatmaps <span class="sr-only"></span></a>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" data-toggle="tooltip" data-placement="top" title="Currently not available">Leaderboard</a>
+      </li>
+    </ul>
+    <script type="text/javascript">
+          function redirect() {
+              document.location.href = '/search/?q=' + document.getElementById('myInput').value;
+              return false;
+          }
+    </script>
+      <form class="form-inline my-2 my-lg-0" onsubmit="return redirect();">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="myInput">
+      </form>
+  </div>
+</nav>
+    {% block home %}
+
+    {% endblock %}
+  <footer class="footer">
+      <div class="container center">
+        <div class="row justify-content-center">
+          <a class="nav-link js-scroll-trigger" href="">Enjuu, using Ripple & Shiina &copy; 2018</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
